@@ -1,4 +1,6 @@
 
+const webpack = require('webpack');
+
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -7,6 +9,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader','eslint-loader']
       }
     ]
   },
@@ -18,6 +25,9 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     contentBase: './dist'
   }
