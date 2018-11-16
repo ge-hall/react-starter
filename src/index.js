@@ -3,14 +3,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import ReactDOM from 'react-dom';
-// eslint-disable-next-line no-unused-vars
-import Example from './components/example';
-
+// eslint-disable no-unused-vars
+import Header from './components/header';
+import Body from './components/body';
 const title = 'My Minimal React Webpack Babel Setup';
 
 ReactDOM.render(
   <div>{title}
-  <Example></Example>
+  <Header></Header>
+  <Body></Body>
   </div>,
   document.getElementById('app'),
 );
