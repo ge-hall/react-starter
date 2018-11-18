@@ -1,18 +1,20 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "rules": {
     "max-len": [
       1,
-      70,
+      90,
       2
       
     ],
     "ignoreComments": true,
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react-hooks/rules-of-hooks": "error"
   },
   "extends": [
     "eslint:recommended",
